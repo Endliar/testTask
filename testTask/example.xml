@@ -1,0 +1,26 @@
+﻿<Clients>
+	<Client>
+		<FIO>Иванов Андрей Михайлович</FIO>
+		<RegNumber>767</RegNumber>
+		<DiasoftID>2010020291085</DiasoftID>
+		<Registrator>Симонова И.Е.</Registrator>
+	</Client>
+	<Client>
+		<FIO>Коробейникова Оксана Анатольевна</FIO>
+		<RegNumber>78</RegNumber>
+		<DiasoftID>2010020292457</DiasoftID>
+		<Registrator>Павлова С.</Registrator>
+	</Client>
+	<Client>
+		<FIO>Тимофеевс Александрс</FIO>
+		<RegNumber>76</RegNumber>
+		<DiasoftID>2010020238617</DiasoftID>
+		<Registrator>Суслова И.</Registrator>
+	</Client>
+	<Client>
+		<FIO>Тюрин Владимир Васильевич</FIO>
+		<RegNumber>766</RegNumber>
+		<DiasoftID>2010020229289</DiasoftID>
+		<Registrator>Симонова И.Е.</Registrator>
+	</Client>
+</Clients>

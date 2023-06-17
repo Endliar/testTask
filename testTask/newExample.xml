@@ -1,0 +1,14 @@
+<Clients>
+  <Client>
+    <FIO>Иванов Андрей Михайлович</FIO>
+    <RegNumber>767</RegNumber>
+    <DiasoftID>2010020291085</DiasoftID>
+    <Registrator RegistratorID="1">Симонова И.Е.</Registrator>
+  </Client>
+  <Client>
+    <FIO>Тюрин Владимир Васильевич</FIO>
+    <RegNumber>766</RegNumber>
+    <DiasoftID>2010020229289</DiasoftID>
+    <Registrator RegistratorID="2">Симонова И.Е.</Registrator>
+  </Client>
+</Clients>
