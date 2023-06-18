@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRegistrator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Registrator ID="1">
+    <Name>Симонова И.Е.</Name>
+  </Registrator>
+  <Registrator ID="2">
+    <Name>Павлова С.</Name>
+  </Registrator>
+  <Registrator ID="3">
+    <Name>Суслова И.</Name>
+  </Registrator>
+  <Registrator ID="4">
+    <Name>Симонова И.Е.</Name>
+  </Registrator>
+</ArrayOfRegistrator>

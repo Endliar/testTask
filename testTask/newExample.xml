@@ -6,9 +6,21 @@
     <Registrator RegistratorID="1">Симонова И.Е.</Registrator>
   </Client>
   <Client>
+    <FIO>Коробейникова Оксана Анатольевна</FIO>
+    <RegNumber>78</RegNumber>
+    <DiasoftID>2010020292457</DiasoftID>
+    <Registrator RegistratorID="2">Павлова С.</Registrator>
+  </Client>
+  <Client>
+    <FIO>Тимофеевс Александрс</FIO>
+    <RegNumber>76</RegNumber>
+    <DiasoftID>2010020238617</DiasoftID>
+    <Registrator RegistratorID="3">Суслова И.</Registrator>
+  </Client>
+  <Client>
     <FIO>Тюрин Владимир Васильевич</FIO>
     <RegNumber>766</RegNumber>
     <DiasoftID>2010020229289</DiasoftID>
-    <Registrator RegistratorID="2">Симонова И.Е.</Registrator>
+    <Registrator RegistratorID="4">Симонова И.Е.</Registrator>
   </Client>
 </Clients>
