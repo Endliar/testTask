@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using testTask;
@@ -20,33 +21,31 @@ namespace testTask.Resources
         public void RemoveMultipleElement()
             {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(xmlFile);
-
-                XmlNodeList clientNodes = xmlDoc.SelectNodes("//Client");
-
-                foreach (XmlNode clientNode in clientNodes)
+            xmlDoc.Load(primaryXmlFile);
+            XmlNodeList clientNodes = xmlDoc.SelectNodes("//Client");
+            foreach (XmlNode clientNode in clientNodes)
+            {
+                XmlNode removeNode = clientNode.SelectSingleNode("DiasoftID");
+                if (removeNode != null)
                 {
-                    XmlNode removeNode = clientNode.SelectSingleNode("DiasoftID");
-                    if (removeNode != null)
+                    string fio = clientNode.SelectSingleNode("FIO").InnerText.Trim();
+                    string regNumber = clientNode.SelectSingleNode("RegNumber").InnerText.Trim();
+                    string diasoftID = clientNode.SelectSingleNode("DiasoftID").InnerText.Trim();
+                    string registrator = clientNode.SelectSingleNode("Registrator").InnerText.Trim();
+
+                    bool isFioValid = !string.IsNullOrEmpty(fio);
+                    bool isRegNumberValid = !string.IsNullOrEmpty(regNumber);
+                    bool isDiasoftIdValid = !string.IsNullOrEmpty(diasoftID);
+                    bool isRegistratorValid = !string.IsNullOrEmpty(registrator);
+                    if (!isFioValid || !isRegNumberValid || !isDiasoftIdValid || !isRegistratorValid)
                     {
-                        string fio = clientNode.SelectSingleNode("FIO").InnerText.Trim();
-                        string regNumber = clientNode.SelectSingleNode("RegNumber").InnerText.Trim();
-                        string diasoftID = clientNode.SelectSingleNode("DiasoftID").InnerText.Trim();
-                        string registrator = clientNode.SelectSingleNode("Registrator").InnerText.Trim();
-
-                        bool isFioValid = !string.IsNullOrEmpty(fio);
-                        bool isRegNumberValid = !string.IsNullOrEmpty(regNumber);
-                        bool isDiasoftIdValid = !string.IsNullOrEmpty(diasoftID);
-                        bool isRegistratorValid = !string.IsNullOrEmpty(registrator);
-
-                        if (!isFioValid || !isRegNumberValid || !isDiasoftIdValid || !isRegistratorValid)
-                        {
-                            xmlDoc.DocumentElement.RemoveChild(clientNode);
-                        }
+                        xmlDoc.DocumentElement.RemoveChild(clientNode);
                     }
+
                 }
-                xmlDoc.Save(newXmlFile);
             }
+            xmlDoc.Save(newXmlFile);
+        }
 
             public void AutoIncrementID(string xmlFile, string myNode, string reg)
             {

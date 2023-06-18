@@ -21,6 +21,8 @@ namespace testTask
             readXMLFile.RemoveMultipleElement();
             readXMLFile.AutoIncrementID(newXmlFile, "//Client/Registrator", "RegistratorID");
             RegistratorList registratorLists = new RegistratorList();
+            GenerateXmlErr generateXmlErr = new GenerateXmlErr();
+            generateXmlErr.GenErrXml();
             registratorLists.GenerateRegistratorList(newXmlFile);
             readXMLFile.AutoIncrementID(registratorXmlList, "//Registrator", "ID");
         }
