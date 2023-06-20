@@ -17,10 +17,6 @@ namespace testTask.Resources
 
     public class RegistratorList
     {
-        const string primaryXmlFile = "C://Users//endli//source//repos//testTask//testTask//Clients.xml";
-        const string xmlFile = "C://Users//endli//source//repos//testTask//testTask//example.xml";
-        const string newXmlFile = "C://Users//endli//source//repos//testTask//testTask//newExample.xml";
-        const string registratorXmlList = "C://Users//endli//source//repos//testTask//testTask//registratorList.xml";
 
             public void GenerateRegistratorList(string newXmlFile)
             {
@@ -44,7 +40,7 @@ namespace testTask.Resources
                 }
 
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Registrator>));
-                using (FileStream stream = new FileStream(registratorXmlList, FileMode.Create))
+                using (FileStream stream = new FileStream(Constants.registratorXmlList, FileMode.Create))
                 {
                     xmlSerializer.Serialize(stream, registrators);
                 }

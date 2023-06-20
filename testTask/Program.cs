@@ -9,22 +9,16 @@ namespace testTask
 {
     public class Program
     {
-
-        const string primaryXmlFile = "C://Users//endli//source//repos//testTask//testTask//Clients.xml";
-        const string xmlFile = "C://Users//endli//source//repos//testTask//testTask//example.xml";
-        const string newXmlFile = "C://Users//endli//source//repos//testTask//testTask//newExample.xml";
-        const string registratorXmlList = "C://Users//endli//source//repos//testTask//testTask//registratorList.xml";
-
         public static void Main(string[] args)
         {
             ReadXMLFile readXMLFile = new ReadXMLFile();
             readXMLFile.RemoveMultipleElement();
-            readXMLFile.AutoIncrementID(newXmlFile, "//Client/Registrator", "RegistratorID");
+            readXMLFile.AutoIncrementID(Constants.newXmlFile, "//Client/Registrator", "RegistratorID");
             RegistratorList registratorLists = new RegistratorList();
             GenerateXmlErr generateXmlErr = new GenerateXmlErr();
             generateXmlErr.GenErrXml();
-            registratorLists.GenerateRegistratorList(newXmlFile);
-            readXMLFile.AutoIncrementID(registratorXmlList, "//Registrator", "ID");
+            registratorLists.GenerateRegistratorList(Constants.newXmlFile);
+            readXMLFile.AutoIncrementID(Constants.registratorXmlList, "//Registrator", "ID");
         }
     }
 }

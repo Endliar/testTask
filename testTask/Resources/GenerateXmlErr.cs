@@ -9,16 +9,10 @@ namespace testTask.Resources
 {
     public class GenerateXmlErr
     {
-
-        const string primaryXmlFile = "C://Users//endli//source//repos//testTask//testTask//Clients.xml";
-        const string xmlFile = "C://Users//endli//source//repos//testTask//testTask//example.xml";
-        const string newXmlFile = "C://Users//endli//source//repos//testTask//testTask//newExample.xml";
-        const string registratorXmlList = "C://Users//endli//source//repos//testTask//testTask//registratorList.xml";
-
         public void GenErrXml()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(primaryXmlFile);
+            xmlDoc.Load(Constants.primaryXmlFile);
             XmlNodeList clientNodes = xmlDoc.SelectNodes("//Client");
             var errorCounts = new Dictionary<string, int>();
             int totalErrors = 0;
